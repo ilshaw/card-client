@@ -1,0 +1,13 @@
+node_modules/**/*
+node_modules/**
+node_modules/*
+
+.nuxt/**/*
+.nuxt/**
+.nuxt/*
+
+dist/**/*
+dist/**
+dist/*
+
+.env
