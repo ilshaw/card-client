@@ -1,7 +1,8 @@
 {
   "name": "auth-client",
   "scripts": {
-    "start:dev": "nuxt dev"
+    "start:dev": "nuxt dev",
+    "lint": "eslint ./src/**/*.ts --fix"
   },
   "dependencies": {
     "nuxt": "^3.12.1",

@@ -1,5 +1,10 @@
 export default defineNuxtConfig({
-    devtools: { 
-        enabled: false
+    dir: {
+        app: "./src"
+    },
+    nitro: {
+        devProxy: {
+            "/api": "http://localhost:8080"
+        }
     }
 });
