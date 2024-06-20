@@ -1,15 +1,20 @@
 <script setup lang="ts">
-    definePageMeta({
-        middleware: "auth"
-    });
+    import Footer from "../../components/footer.vue";
+    import Header from "../../components/header.vue";
+    import Page from "../../components/page.vue";
+    import Main from "../../components/main.vue";
 </script>
 
 <template>
-    <span>
-        Profile
-    </span>
+    <Page>
+        <Header>
+            Header
+        </Header>
+        <Main>
+            Profile
+        </Main>
+        <Footer>
+            Footer
+        </Footer>
+    </Page>
 </template>
-
-<style scoped lang="scss">
-
-</style>
