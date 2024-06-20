@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import Container from "./container.vue";
+
     interface MainProps {
         class?: string
     }
@@ -7,11 +9,11 @@
 </script>
 
 <template>
-    <UContainer class="main">
-        <UContainer class="container" :class="props.class">
+    <Container class="main">
+        <Container class="main-container" :class="props.class">
             <slot/>
-        </UContainer>
-    </UContainer>
+        </Container>
+    </Container>
 </template>
 
 <style scoped lang="scss">
@@ -19,7 +21,7 @@
         @apply flex flex-col justify-center items-center w-full h-full;
     }
 
-    .container {
+    .main-container {
         @apply flex flex-col justify-center items-center w-full h-full;
     }
 </style>

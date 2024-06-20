@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import Container from "./container.vue";
+
     interface PageProps {
         class?: string
     }
@@ -7,9 +9,9 @@
 </script>
 
 <template>
-    <UContainer class="page" :class="props.class">
+    <Container class="page" :class="props.class">
         <slot/>
-    </UContainer>
+    </Container>
 </template>
 
 <style scoped lang="scss">

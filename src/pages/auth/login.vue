@@ -3,6 +3,7 @@
     import Button from "../../components/button.vue";
     import Footer from "../../components/footer.vue";
     import Header from "../../components/header.vue";
+    import Social from "../../components/social.vue";
     import Input from "../../components/input.vue";
     import Form from "../../components/form.vue";
     import Page from "../../components/page.vue";
@@ -21,12 +22,12 @@
 </script>
 
 <template>
-    <Page class="page-signup">
-        <Header class="header-signup">
+    <Page>
+        <Header>
             Header
         </Header>
-        <Main class="main-signup">
-            <Form class="form-signup" :state="state" @submit="(event) => submit(event)">
+        <Main>
+            <Form :state="state" @submit="(event) => submit(event)">
                 <Text>
                     Authentication
                 </Text>
@@ -44,8 +45,11 @@
                 </Text>
             </Form>
         </Main>
-        <Footer class="footer-signup">
-            Footer
+        <Footer>
+            <Text>
+                Copyright © 2024
+            </Text>
+            <Social/>
         </Footer>
     </Page>
 </template>

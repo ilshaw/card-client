@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
     modules: [
+        "@nuxt/icon",
         "@nuxt/ui"
     ],
     nitro: {

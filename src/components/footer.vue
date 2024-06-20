@@ -1,4 +1,6 @@
 <script setup lang="ts">
+    import Container from "./container.vue";
+
     interface FooterProps {
         class?: string
     }
@@ -7,11 +9,11 @@
 </script>
 
 <template>
-    <UContainer class="footer">
-        <UContainer class="container" :class="props.class">
+    <Container class="footer">
+        <Container class="footer-container" :class="props.class">
             <slot/>
-        </UContainer>
-    </UContainer>
+        </Container>
+    </Container>
 </template>
 
 <style scoped lang="scss">
@@ -19,7 +21,7 @@
         @apply flex flex-col justify-center items-center w-full h-16;
     }
 
-    .container {
-        @apply flex flex-col justify-center items-center w-full h-16;
+    .footer-container {
+        @apply flex flex-col justify-center items-center w-full h-16 gap-2;
     }
 </style>
