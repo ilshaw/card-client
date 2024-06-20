@@ -5,16 +5,16 @@
     "lint": "eslint ./src/**/*.ts --fix"
   },
   "dependencies": {
+    "@nuxt/ui": "^2.17.0",
     "nuxt": "^3.12.1",
     "vue": "^3.4.27",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@types/sass": "^1.45.0",
     "@types/vue": "^2.0.0",
     "@types/vue-router": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "@typescript-eslint/parser": "^7.13.0",
-    "typescript": "^5.4.5",
-    "typescript-eslint": "^7.13.0"
+    "sass": "^1.77.6",
+    "typescript": "^5.4.5"
   }
 }

@@ -1,13 +1,12 @@
 export default defineNuxtConfig({
-    dir: {
-        app: "./src",
-        pages: "./src/pages",
-        middleware: "./src/middlewares"
-    },
+    modules: [
+        "@nuxt/ui"
+    ],
     nitro: {
         devProxy: {
             "/api": "http://localhost:8080"
         }
     },
+    srcDir: "./src",
     ssr: false
 });
