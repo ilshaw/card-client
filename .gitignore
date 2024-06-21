@@ -2,6 +2,10 @@ node_modules/**/*
 node_modules/**
 node_modules/*
 
+.output/**/*
+.output/**
+.output/*
+
 .nuxt/**/*
 .nuxt/**
 .nuxt/*
