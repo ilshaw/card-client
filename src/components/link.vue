@@ -1,20 +1,21 @@
 <script setup lang="ts">
     interface LinkProps {
+        external?: boolean
         class?: string
-        to: string
+        to?: string
     }
 
     const props = defineProps<LinkProps>();
 </script>
 
 <template>
-    <NuxtLink class="link" :class="props.class" :to="props.to">
+    <NuxtLink class="link" :to="props.to" :class="props.class" :external="props.external">
         <slot/>
     </NuxtLink>
 </template>
 
 <style scoped lang="scss">
     .link {
-        @apply underline text-base text-primary-500;
+        @apply underline text-primary-500;
     }
 </style>

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-    import Footer from "../../components/footer.vue";
-    import Header from "../../components/header.vue";
-    import Page from "../../components/page.vue";
-    import Main from "../../components/main.vue";
+    import Footer from "../components/footer.vue";
+    import Header from "../components/header.vue";
+    import Page from "../components/page.vue";
+    import Main from "../components/main.vue";
 
     const store = useUserStore();
 
@@ -10,8 +10,7 @@
 
     definePageMeta({
         middleware: [
-            "user",
-            "auth"
+            "user"
         ]
     });
 </script>
@@ -21,7 +20,7 @@
         <Header/>
         <Main>
             <pre>
-                Profile {{ user }}
+                Main {{ user }}
             </pre>
         </Main>
         <Footer/>

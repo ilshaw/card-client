@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <UContainer class="container" :class="props.class">
+    <UContainer :class="props.class">
         <slot/>
     </UContainer>
 </template>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
     interface FormProps {
         class?: string
-        state: any
+        state?: any
     }
 
     interface FormEmits {

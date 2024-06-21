@@ -3,7 +3,6 @@
     import Button from "../../components/button.vue";
     import Footer from "../../components/footer.vue";
     import Header from "../../components/header.vue";
-    import Social from "../../components/social.vue";
     import Input from "../../components/input.vue";
     import Form from "../../components/form.vue";
     import Page from "../../components/page.vue";
@@ -11,23 +10,44 @@
     import Main from "../../components/main.vue";
     import Link from "../../components/link.vue";
 
+    const router = useRouter();
+
+    const fetch = useInternalFetch();
+
     const state = ref({
         password: "",
         email: ""
     });
 
-    function submit(event: any) {
-        
+    async function submit(event: any) {
+        const response = await fetch.post<{ user?: unknown }>("/api/auth/signup", {
+            body: JSON.stringify({
+                password: event.data.password,
+                email: event.data.email
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            credentials: "include"
+        });
+
+        if(response.status === 201 && response.body.data && response.body.data.user) {
+            return await router.push("/");
+        }
     }
+
+    definePageMeta({
+        middleware: [
+            "user"
+        ]
+    });
 </script>
 
 <template>
     <Page>
-        <Header>
-            Header
-        </Header>
+        <Header/>
         <Main>
-            <Form class="form-signup" :state="state" @submit="(event) => submit(event)">
+            <Form :state="state" @submit="async (event) => await submit(event)">
                 <Text>
                     Registration
                 </Text>
@@ -45,11 +65,6 @@
                 </Text>
             </Form>
         </Main>
-        <Footer>
-            <Text>
-                Copyright © 2024
-            </Text>
-            <Social/>
-        </Footer>
+        <Footer/>
     </Page>
 </template>

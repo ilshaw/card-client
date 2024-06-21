@@ -1,5 +1,7 @@
 <script setup lang="ts">
     import Container from "./container.vue";
+    import Social from "./social.vue";
+    import Text from "./text.vue";
 
     interface FooterProps {
         class?: string
@@ -11,7 +13,10 @@
 <template>
     <Container class="footer">
         <Container class="footer-container" :class="props.class">
-            <slot/>
+            <Text>
+                Copyright © 2024
+            </Text>
+            <Social/>
         </Container>
     </Container>
 </template>

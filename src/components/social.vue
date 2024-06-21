@@ -5,14 +5,14 @@
 
 <template>
     <Container class="social">
-        <Link class="link-social" to="https://t.me/ilshaw">
-            <Icon name="uil:telegram" size="1rem"/>
+        <Link external to="https://t.me/ilshaw">
+            <Icon name="uil:telegram"/>
         </Link>
-        <Link class="link-social" to="https://github.com/ilshaw">
-            <Icon name="uil:github" size="1rem"/>
+        <Link external to="https://github.com/ilshaw">
+            <Icon name="uil:github"/>
         </Link>
-        <Link class="link-social" to="https://vk.com/ilshaw">
-            <Icon name="uil:vk" size="1rem"/>
+        <Link external to="https://vk.com/ilshaw">
+            <Icon name="uil:vk"/>
         </Link>
     </Container>
 </template>
@@ -20,9 +20,5 @@
 <style scoped lang="scss">
     .social {
         @apply flex flex-row justify-center items-center gap-2;
-    }
-
-    .link-social {
-        @apply flex flex-col justify-center items-center;
     }
 </style>

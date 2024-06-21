@@ -1,8 +1,9 @@
 <template>
     <Html class="html">
         <Head>
+            <Link rel="icon" href="/icons/favicon.ico"/>
             <Title>
-                Application
+                WellCard
             </Title>
         </Head>
         <Body class="body">

@@ -7,13 +7,7 @@
 </script>
 
 <template>
-    <span class="text" :class="props.class">
+    <span :class="props.class">
         <slot/>
     </span>
 </template>
-
-<style scoped lang="scss">
-    .text {
-        @apply text-base;
-    }
-</style>
