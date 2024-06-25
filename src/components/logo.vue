@@ -5,16 +5,16 @@
 
 <template>
     <Link class="logo" to="/">
-        <Image class="image-logo" src="/images/logo.png"/>
+        <Image class="logo-image" src="/images/logo.png"/>
     </Link>
 </template>
 
 <style scoped lang="scss">
     .logo {
-        @apply h-8;
+        @apply flex justify-center items-center h-16;
     }
 
-    .image-logo {
-        @apply h-8;
+    .logo-image {
+        @apply flex justify-center items-center h-8;
     }
 </style>

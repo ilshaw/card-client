@@ -8,5 +8,11 @@
 </script>
 
 <template>
-    <UInput :type="props.type" :class="props.class"/>
+    <UInput class="input" :type="props.type" :class="props.class"/>
 </template>
+
+<style scoped lang="scss">
+    .input {
+
+    }
+</style>

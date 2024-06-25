@@ -10,7 +10,13 @@
 </script>
 
 <template>
-    <UButton :to="props.to" :type="props.type" :class="props.class" :block="props.block">
+    <UButton class="button" :to="props.to" :type="props.type" :class="props.class" :block="props.block">
         <slot/>
     </UButton>
 </template>
+
+<style scoped lang="scss">
+    .button {
+
+    }
+</style>

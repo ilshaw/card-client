@@ -16,6 +16,6 @@
 
 <style scoped lang="scss">
     .link {
-        @apply underline text-primary-500;
+        @apply underline;
     }
 </style>

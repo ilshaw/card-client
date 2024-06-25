@@ -16,21 +16,33 @@
 </script>
 
 <template>
-    <Container class="header">
+    <header class="header">
         <Container class="header-container" :class="props.class">
-            <Logo/>
-            <Profile v-if="user"/>
-            <Auth v-else/>
+            <Logo class="header-container-logo"/>
+            <Profile class="header-container-profile" v-if="user"/>
+            <Auth class="header-container-auth" v-else/>
         </Container>
-    </Container>
+    </header>
 </template>
 
 <style scoped lang="scss">
     .header {
-        @apply flex flex-col justify-center items-center w-full h-16;
+        @apply flex justify-between items-center h-16;
     }
 
     .header-container {
-        @apply flex flex-row justify-between items-center w-full h-16 gap-2;
+        @apply flex justify-between items-center h-16;
+    }
+
+    .header-container-logo {
+        @apply flex justify-center items-center h-16;
+    }
+
+    .header-container-profile {
+        @apply flex justify-center items-center h-16;
+    }
+
+    .header-container-auth {
+        @apply flex justify-center items-center h-16;
     }
 </style>

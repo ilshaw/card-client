@@ -9,19 +9,19 @@
 </script>
 
 <template>
-    <Container class="main">
+    <main class="main">
         <Container class="main-container" :class="props.class">
             <slot/>
         </Container>
-    </Container>
+    </main>
 </template>
 
 <style scoped lang="scss">
     .main {
-        @apply flex flex-col justify-center items-center w-full h-full;
+        @apply flex w-full h-full;
     }
 
     .main-container {
-        @apply flex flex-col justify-center items-center w-full h-full;
+        @apply flex w-full h-full;
     }
 </style>

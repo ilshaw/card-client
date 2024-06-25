@@ -11,22 +11,30 @@
 </script>
 
 <template>
-    <Container class="footer">
+    <footer class="footer">
         <Container class="footer-container" :class="props.class">
-            <Text>
+            <Text class="footer-container-copyright">
                 Copyright © 2024
             </Text>
-            <Social/>
+            <Social class="footer-container-social"/>
         </Container>
-    </Container>
+    </footer>
 </template>
 
 <style scoped lang="scss">
     .footer {
-        @apply flex flex-col justify-center items-center w-full h-16;
+        @apply flex flex-col justify-center items-center h-16;
     }
 
     .footer-container {
-        @apply flex flex-col justify-center items-center w-full h-16 gap-2;
+        @apply flex flex-col justify-center items-center h-16;
+    }
+
+    .footer-container-copyright {
+        @apply flex flex-col justify-center items-center h-8;
+    }
+
+    .footer-container-social {
+
     }
 </style>

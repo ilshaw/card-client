@@ -8,12 +8,18 @@
 </script>
 
 <template>
-    <UDropdown :class="props.class" :items="props.items">
+    <UDropdown class="dropdown" :class="props.class" :items="props.items">
         <template #default>
             <slot name="default"/>
         </template>
-        <template #item="{ item }">
-            <slot name="item" :item="item"/>
+        <template #item="props">
+            <slot name="item" :item="props.item"/>
         </template>
     </UDropdown>
 </template>
+
+<style scoped lang="scss">
+    .dropdown {
+
+    }
+</style>

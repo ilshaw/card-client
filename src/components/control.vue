@@ -10,7 +10,13 @@
 </script>
 
 <template>
-    <UFormGroup :name="props.name" :label="props.label" :class="props.class" :required="props.required">
+    <UFormGroup class="control" :name="props.name" :label="props.label" :class="props.class" :required="props.required">
         <slot/>
     </UFormGroup>
 </template>
+
+<style scoped lang="scss">
+    .control {
+
+    }
+</style>

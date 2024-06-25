@@ -8,5 +8,11 @@
 </script>
 
 <template>
-        <NuxtImg :src="props.src" :class="props.class"/>
+        <NuxtImg class="image" :src="props.src" :class="props.class"/>
 </template>
+
+<style scoped lang="scss">
+    .image {
+
+    }
+</style>

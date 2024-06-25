@@ -7,7 +7,13 @@
 </script>
 
 <template>
-    <span :class="props.class">
+    <span class="text" :class="props.class">
         <slot/>
     </span>
 </template>
+
+<style scoped lang="scss">
+    .text {
+
+    }
+</style>

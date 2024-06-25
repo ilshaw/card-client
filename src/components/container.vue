@@ -7,7 +7,13 @@
 </script>
 
 <template>
-    <UContainer :class="props.class">
+    <div class="container" :class="props.class">
         <slot/>
-    </UContainer>
+    </div>
 </template>
+
+<style scoped lang="scss">
+    .container {
+
+    }
+</style>

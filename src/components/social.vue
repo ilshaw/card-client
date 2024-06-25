@@ -5,20 +5,28 @@
 
 <template>
     <Container class="social">
-        <Link external to="https://t.me/ilshaw">
-            <Icon name="uil:telegram"/>
+        <Link class="social-link" external to="https://t.me/ilshaw">
+            <Icon class="social-link-icon" name="uil:telegram"/>
         </Link>
-        <Link external to="https://github.com/ilshaw">
-            <Icon name="uil:github"/>
+        <Link class="social-link" external to="https://github.com/ilshaw">
+            <Icon class="social-link-icon" name="uil:github"/>
         </Link>
-        <Link external to="https://vk.com/ilshaw">
-            <Icon name="uil:vk"/>
+        <Link class="social-link" external to="https://vk.com/ilshaw">
+            <Icon class="social-link-icon" name="uil:vk"/>
         </Link>
     </Container>
 </template>
 
 <style scoped lang="scss">
     .social {
-        @apply flex flex-row justify-center items-center gap-2;
+        @apply flex justify-center items-center h-8 gap-2;
+    }
+
+    .social-link {
+        @apply flex justify-center items-center w-8 h-8;
+    }
+
+    .social-link-icon {
+        @apply flex justify-center items-center w-4 h-4;
     }
 </style>

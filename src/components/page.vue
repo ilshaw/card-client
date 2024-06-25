@@ -16,6 +16,6 @@
 
 <style scoped lang="scss">
     .page {
-        @apply flex flex-col justify-center items-center w-full h-full gap-4;
+        @apply flex flex-col w-full h-full;
     }
 </style>

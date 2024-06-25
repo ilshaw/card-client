@@ -4,10 +4,6 @@
     import Page from "../components/page.vue";
     import Main from "../components/main.vue";
 
-    const store = useUserStore();
-
-    const user = store.getUser();
-
     definePageMeta({
         middleware: [
             "user"
@@ -18,11 +14,15 @@
 <template>
     <Page>
         <Header/>
-        <Main>
-            <pre>
-                Main {{ user }}
-            </pre>
+        <Main class="index-main">
+            
         </Main>
         <Footer/>
     </Page>
 </template>
+
+<style lang="scss">
+    .index-main {
+        @apply flex justify-center items-center;
+    }
+</style>

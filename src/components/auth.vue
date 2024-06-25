@@ -5,10 +5,10 @@
 
 <template>
     <Container class="auth">
-        <Button to="/auth/signup">
+        <Button class="auth-button" to="/auth/signup">
             Signup
         </Button>
-        <Button to="/auth/login">
+        <Button class="auth-button" to="/auth/login">
             Login
         </Button>
     </Container>
@@ -16,6 +16,10 @@
 
 <style scoped lang="scss">
     .auth {
-        @apply flex flex-row w-min p-0 m-0 gap-2;
+        @apply flex justify-center items-center w-min h-16 gap-2;
+    }
+
+    .auth-button {
+        @apply flex justify-center items-center w-min h-8;
     }
 </style>

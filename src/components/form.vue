@@ -21,6 +21,6 @@
 
 <style scoped lang="scss">
     .form {
-        @apply flex flex-col gap-4;
+
     }
 </style>
