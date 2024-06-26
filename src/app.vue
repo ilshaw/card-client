@@ -14,14 +14,14 @@
 
 <style lang="scss">
     .html {
-        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full text-base;
+        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full;
     }
 
     .body {
-        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full text-base;
+        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full;
     }
 
     #__nuxt {
-        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full text-base;
+        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full;
     }
 </style>
