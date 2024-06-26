@@ -16,7 +16,7 @@
 
 <style scoped lang="scss">
     .auth {
-        @apply flex justify-center items-center w-min h-16 gap-2;
+        @apply flex justify-center items-center w-min h-16 gap-4;
     }
 
     .auth-button {

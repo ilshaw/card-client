@@ -31,7 +31,7 @@
     }
 
     .header-container {
-        @apply flex justify-between items-center h-16;
+        @apply flex justify-between items-center h-16 px-4;
     }
 
     .header-container-logo {

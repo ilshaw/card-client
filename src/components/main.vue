@@ -22,6 +22,6 @@
     }
 
     .main-container {
-        @apply flex w-full h-full;
+        @apply flex w-full h-full px-4;
     }
 </style>

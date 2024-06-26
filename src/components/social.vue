@@ -19,7 +19,7 @@
 
 <style scoped lang="scss">
     .social {
-        @apply flex justify-center items-center h-8 gap-2;
+        @apply flex justify-center items-center h-8 gap-4;
     }
 
     .social-link {

@@ -27,7 +27,7 @@
     }
 
     .footer-container {
-        @apply flex flex-col justify-center items-center h-16;
+        @apply flex flex-col justify-center items-center h-16 px-4;
     }
 
     .footer-container-copyright {
