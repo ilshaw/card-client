@@ -1,7 +1,7 @@
-const userStore = useUserStore();
+const sessionStore = useSessionStore();
 
 export default defineNuxtRouteMiddleware(async () => {
-    const response = await userStore.fetchProfile();
+    const response = await sessionStore.fetchSession();
 
     if(response.status === 200) {
         return true;

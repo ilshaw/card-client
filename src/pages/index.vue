@@ -6,6 +6,8 @@
 
     definePageMeta({
         middleware: [
+            "session",
+            "card",
             "user"
         ]
     });

@@ -8,9 +8,9 @@
         class?: string
     }
 
-    const store = useUserStore();
+    const userStore = useUserStore();
 
-    const user = store.getUser();
+    const user = userStore.getUser();
 
     const props = defineProps<HeaderProps>();
 </script>

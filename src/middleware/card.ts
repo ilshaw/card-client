@@ -1,7 +1,7 @@
-const userStore = useUserStore();
+const cardStore = useCardStore();
 
 export default defineNuxtRouteMiddleware(async () => {
-    const response = await userStore.fetchProfile();
+    const response = await cardStore.fetchCard();
 
     if(response.status === 200) {
         return true;

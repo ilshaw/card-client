@@ -14,14 +14,32 @@
 
 <style lang="scss">
     .html {
-        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        min-height: 100%;
+        min-width: 100%;
+        display: grid;
+        height: 100%;
+        width: 100%;
     }
 
     .body {
-        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        min-height: 100%;
+        min-width: 100%;
+        display: grid;
+        height: 100%;
+        width: 100%;
     }
 
     #__nuxt {
-        @apply flex flex-col justify-center items-center w-full min-w-full h-full min-h-full;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        min-height: 100%;
+        min-width: 100%;
+        display: grid;
+        height: 100%;
+        width: 100%;
     }
 </style>

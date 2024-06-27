@@ -10,9 +10,9 @@
     import Main from "../../components/main.vue";
     import Link from "../../components/link.vue";
 
-    const router = useRouter();
+    const userStore = useUserStore();
 
-    const fetch = useInternalFetch();
+    const router = useRouter();
 
     const state = ref({
         password: "",
@@ -20,24 +20,20 @@
     });
 
     async function submit(event: any) {
-        const response = await fetch.post<{ user?: unknown }>("/api/auth/signup", {
-            body: JSON.stringify({
-                password: event.data.password,
-                email: event.data.email
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            },
-            credentials: "include"
-        });
+        const response = await userStore.fetchSignup(event.data.password, event.data.email);
 
-        if(response.status === 201 && response.body.data && response.body.data.user) {
+        if(response.status === 201) {
             return await router.push("/");
+        }
+        else {
+            return await router.push("/auth/signup");
         }
     }
 
     definePageMeta({
         middleware: [
+            "session",
+            "card",
             "user"
         ]
     });

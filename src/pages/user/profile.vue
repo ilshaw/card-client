@@ -4,12 +4,18 @@
     import Page from "../../components/page.vue";
     import Main from "../../components/main.vue";
 
-    const store = useUserStore();
+    const sessionStore = useSessionStore();
+    const cardStore = useCardStore();
+    const userStore = useUserStore();
 
-    const user = store.getUser();
+    const session = sessionStore.getSession();
+    const card = cardStore.getCard();
+    const user = userStore.getUser();
 
     definePageMeta({
         middleware: [
+            "session",
+            "card",
             "user",
             "auth"
         ]
@@ -21,10 +27,20 @@
         <Header/>
         <Main class="profile-main">
             <Container class="profile-main-info">
-
+                <pre>
+                    <span>profile</span>
+                    <span>{{ user }}</span>
+                </pre>
+                <pre>
+                    <span>session</span>
+                    <span>{{ session }}</span>
+                </pre>
             </Container>
             <Container class="profile-main-card">
-
+                <pre>
+                    <span>card</span>
+                    <span>{{ card }}</span>
+                </pre>
             </Container>
         </Main>
         <Footer/>

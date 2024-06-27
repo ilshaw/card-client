@@ -1,8 +1,8 @@
+const userStore = useUserStore();
 const router = useRouter();
-const store = useUserStore();
 
 export default defineNuxtRouteMiddleware(async () => {
-    const user = store.getUser();
+    const user = userStore.getUser();
 
     if(user.value === null) {
         return await router.push("/auth/login");

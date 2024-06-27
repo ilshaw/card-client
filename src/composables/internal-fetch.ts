@@ -10,21 +10,6 @@ interface FetchOptions {
 }
 
 export function useInternalFetch() {
-    async function patch<D = unknown, C = unknown>(url: FetchUrl, options?: FetchOptions) {
-        try {
-            return await useExternalFetch<D, C>(url, { ...options, method: "PATCH" });
-        }
-        catch(error) {
-            return {
-                body: {
-                    message: "Unexpected error has occurred",
-                    status: 500
-                },
-                status: 500
-            }
-        }
-    }
-
     async function post<D = unknown, C = unknown>(url: FetchUrl, options?: FetchOptions) {
         try {
             return await useExternalFetch<D, C>(url, { ...options, method: "POST" });
@@ -56,7 +41,6 @@ export function useInternalFetch() {
     }
 
     return { 
-        patch, 
         post, 
         get 
     };

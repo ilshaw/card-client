@@ -4,11 +4,9 @@
     import Avatar from "./avatar.vue";
     import Text from "./text.vue";
 
+    const userStore = useUserStore();
+
     const router = useRouter();
-
-    const fetch = useInternalFetch();
-
-    const store = useUserStore();
 
     const items = ref([
         [
@@ -28,35 +26,13 @@
     ]);
 
     async function logout() {
-        const response = await fetch.get("/api/auth/logout");
+        const response = await userStore.fetchLogout();
 
         if(response.status === 200) {
-            store.setUser(null);
-
             return await router.push("/");
         }
         else {
-            const response = await fetch.get("/api/token/refresh");
-
-            if(response.status === 200) {
-                const response = await fetch.get("/api/auth/logout");
-
-                if(response.status === 200) {
-                    store.setUser(null);
-
-                    return await router.push("/");
-                }
-                else {
-                    store.setUser(null);
-
-                    return await router.push("/");
-                }
-            }
-            else {
-                store.setUser(null);
-
-                return await router.push("/");
-            }
+            return await router.push("/");
         }
     }
 </script>
