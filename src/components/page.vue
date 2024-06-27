@@ -16,6 +16,12 @@
 
 <style scoped lang="scss">
     .page {
-        @apply flex flex-col w-full h-full gap-4;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        place-items: center;
+        display: grid;
+        height: 100%;
+        width: 100%;
+        gap: 1rem;
     }
 </style>

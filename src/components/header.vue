@@ -27,22 +27,20 @@
 
 <style scoped lang="scss">
     .header {
-        @apply flex justify-between items-center h-16;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        display: grid;
+        height: 4rem;
+        width: 100%;
     }
 
     .header-container {
-        @apply flex justify-between items-center h-16 px-4;
-    }
-
-    .header-container-logo {
-        @apply flex justify-center items-center h-16;
-    }
-
-    .header-container-profile {
-        @apply flex justify-center items-center h-16;
-    }
-
-    .header-container-auth {
-        @apply flex justify-center items-center h-16;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        display: grid;
+        height: 4rem;
+        width: 100%;
     }
 </style>

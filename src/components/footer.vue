@@ -23,18 +23,20 @@
 
 <style scoped lang="scss">
     .footer {
-        @apply flex flex-col justify-center items-center h-16;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        display: grid;
+        height: 4rem;
+        width: 100%;
     }
 
     .footer-container {
-        @apply flex flex-col justify-center items-center h-16 px-4;
-    }
-
-    .footer-container-copyright {
-        @apply flex flex-col justify-center items-center h-8;
-    }
-
-    .footer-container-social {
-
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        place-items: center;
+        display: grid;
+        height: 4rem;
+        width: 100%;
     }
 </style>

@@ -16,6 +16,7 @@
     .html {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        place-items: center;
         min-height: 100%;
         min-width: 100%;
         display: grid;
@@ -26,6 +27,7 @@
     .body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        place-items: center;
         min-height: 100%;
         min-width: 100%;
         display: grid;
@@ -36,6 +38,7 @@
     #__nuxt {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        place-items: center;
         min-height: 100%;
         min-width: 100%;
         display: grid;

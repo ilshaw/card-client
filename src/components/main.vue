@@ -18,10 +18,17 @@
 
 <style scoped lang="scss">
     .main {
-        @apply flex w-full h-full;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        display: grid;
+        height: 100%;
+        width: 100%;
     }
 
     .main-container {
-        @apply flex w-full h-full px-4;
+        display: grid;
+        height: 100%;
+        width: 100%;
     }
 </style>
