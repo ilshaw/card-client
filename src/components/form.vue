@@ -14,13 +14,13 @@
 </script>
 
 <template>
-    <UForm class="form" :state="props.state" :class="props.class" @submit="(event) => emits('submit', event)">
+    <UForm class="_form" :state="props.state" :class="props.class" @submit="(event) => emits('submit', event)">
         <slot/>
     </UForm>
 </template>
 
 <style scoped lang="scss">
-    .form {
+    ._form {
 
     }
 </style>

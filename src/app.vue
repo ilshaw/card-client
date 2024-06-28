@@ -1,19 +1,19 @@
 <template>
-    <Html class="html">
+    <Html class="_html">
         <Head>
             <Link rel="icon" href="/icons/favicon.ico"/>
             <Title>
                 WellCard
             </Title>
         </Head>
-        <Body class="body">
+        <Body class="_body">
             <NuxtPage/>
         </Body>
     </Html>
 </template>
 
 <style lang="scss">
-    .html {
+    ._html {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
@@ -22,7 +22,7 @@
         display: grid;
     }
 
-    .body {
+    ._body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;

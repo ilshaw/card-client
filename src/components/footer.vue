@@ -11,18 +11,18 @@
 </script>
 
 <template>
-    <footer class="footer">
-        <Container class="footer-container" :class="props.class">
-            <Text class="footer-container-copyright">
+    <footer class="_footer">
+        <Container class="_footer_container" :class="props.class">
+            <Text>
                 Copyright © 2024
             </Text>
-            <Social class="footer-container-social"/>
+            <Social/>
         </Container>
     </footer>
 </template>
 
 <style scoped lang="scss">
-    .footer {
+    ._footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
@@ -31,7 +31,7 @@
         display: grid;
     }
 
-    .footer-container {
+    ._footer_container {
         grid-template-columns: 1fr;
         grid-template-rows: 2rem 2rem;
         place-items: center;

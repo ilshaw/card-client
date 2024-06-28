@@ -8,11 +8,11 @@
 </script>
 
 <template>
-    <UInput class="input" :type="props.type" :class="props.class"/>
+    <UInput class="_input" :type="props.type" :class="props.class"/>
 </template>
 
 <style scoped lang="scss">
-    .input {
+    ._input {
 
     }
 </style>

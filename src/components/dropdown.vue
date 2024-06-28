@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <UDropdown class="dropdown" :class="props.class" :items="props.items">
+    <UDropdown class="_dropdown" :class="props.class" :items="props.items">
         <template #default>
             <slot name="default"/>
         </template>
@@ -19,7 +19,7 @@
 </template>
 
 <style scoped lang="scss">
-    .dropdown {
+    ._dropdown {
 
     }
 </style>

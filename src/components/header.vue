@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <header class="header">
-        <Container class="header-container" :class="props.class">
+    <header class="_header">
+        <Container class="_header_container" :class="props.class">
             <Logo/>
             <Profile v-if="user"/>
             <Auth v-else/>
@@ -26,7 +26,7 @@
 </template>
 
 <style scoped lang="scss">
-    .header {
+    ._header {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
@@ -35,7 +35,7 @@
         display: grid;
     }
 
-    .header-container {
+    ._header_container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 4rem;
         place-items: center;

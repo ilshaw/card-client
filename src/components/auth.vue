@@ -4,22 +4,22 @@
 </script>
 
 <template>
-    <Container class="auth">
-        <Button class="auth-button" to="/auth/signup">
+    <Container class="_auth">
+        <Button class="_auth_button" to="/auth/signup">
             Signup
         </Button>
-        <Button class="auth-button" to="/auth/login">
+        <Button class="_auth_button" to="/auth/login">
             Login
         </Button>
     </Container>
 </template>
 
 <style scoped lang="scss">
-    .auth {
-        @apply flex justify-center items-center w-min h-16 gap-4;
+    ._auth {
+
     }
 
-    .auth-button {
-        @apply flex justify-center items-center w-min h-8;
+    ._auth_button {
+
     }
 </style>

@@ -7,13 +7,13 @@
 </script>
 
 <template>
-    <div class="container" :class="props.class">
+    <div class="_container" :class="props.class">
         <slot/>
     </div>
 </template>
 
 <style scoped lang="scss">
-    .container {
+    ._container {
 
     }
 </style>

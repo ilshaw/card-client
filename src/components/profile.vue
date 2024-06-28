@@ -38,39 +38,39 @@
 </script>
 
 <template>
-    <Dropdown class="profile" :items="items">
+    <Dropdown class="_profile" :items="items">
         <template #default>
-            <Avatar class="profile-avatar" src="https://avatars.githubusercontent.com/u/73400369?v=4"/>
+            <Avatar class="_profile_avatar" src="https://avatars.githubusercontent.com/u/73400369?v=4"/>
         </template>
         <template #item="props">
-            <Container class="profile-item">
-                <Text class="profile-item-text">
+            <Container class="_profile_item">
+                <Text class="_profile_item_text">
                     {{ props.item.label }}
                 </Text>
-                <Icon class="profile-item-icon" :name="props.item.icon"/>
+                <Icon class="_profile_item_icon" :name="props.item.icon"/>
             </Container>
         </template>
     </Dropdown>
 </template>
 
 <style>
-    .profile {
-        @apply flex justify-center items-center h-16;
+    ._profile {
+
     }
 
-    .profile-avatar {
-        @apply flex justify-center items-center h-8;
+    ._profile_avatar {
+
     }
 
-    .profile-item {
-        @apply flex justify-between items-center h-8
+    ._profile_item {
+
     }
 
-    .profile-item-text {
-        @apply flex h-4;
+    ._profile_item_text {
+
     }
 
-    .profile-item-icon {
-        @apply flex h-4 w-4;
+    ._profile_item_icon {
+
     }
 </style>

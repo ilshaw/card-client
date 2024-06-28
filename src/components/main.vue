@@ -9,15 +9,15 @@
 </script>
 
 <template>
-    <main class="main">
-        <Container class="main-container" :class="props.class">
+    <main class="_main">
+        <Container class="_main_container" :class="props.class">
             <slot/>
         </Container>
     </main>
 </template>
 
 <style scoped lang="scss">
-    .main {
+    ._main {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
@@ -26,7 +26,7 @@
         display: grid;
     }
 
-    .main-container {
+    ._main_container {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;

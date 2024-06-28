@@ -8,11 +8,11 @@
 </script>
 
 <template>
-        <NuxtImg class="image" :src="props.src" :class="props.class"/>
+        <NuxtImg class="_image" :src="props.src" :class="props.class"/>
 </template>
 
 <style scoped lang="scss">
-    .image {
+    ._image {
 
     }
 </style>

@@ -8,11 +8,11 @@
 </script>
 
 <template>
-    <UAvatar class="avatar" :src="props.src" :class="props.class"/>
+    <UAvatar class="_avatar" :src="props.src" :class="props.class"/>
 </template>
 
 <style scoped lang="scss">
-    .avatar {
+    ._avatar {
 
     }
 </style>

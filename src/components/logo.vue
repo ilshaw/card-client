@@ -4,17 +4,17 @@
 </script>
 
 <template>
-    <Link class="logo" to="/">
-        <Image class="logo-image" src="/images/logo.png"/>
+    <Link class="_logo" to="/">
+        <Image class="_logo_image" src="/images/logo.png"/>
     </Link>
 </template>
 
 <style scoped lang="scss">
-    .logo {
-        @apply flex justify-center items-center h-16;
+    ._logo {
+
     }
 
-    .logo-image {
-        @apply flex justify-center items-center h-8;
+    ._logo_image {
+
     }
 </style>
