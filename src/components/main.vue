@@ -21,14 +21,18 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
+        min-height: 100%;
+        min-width: 100%;
         display: grid;
-        height: 100%;
-        width: 100%;
     }
 
     .main-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        place-items: center;
+        min-height: 100%;
+        min-width: 100%;
+        padding: 0 2rem 0 2rem;
         display: grid;
-        height: 100%;
-        width: 100%;
     }
 </style>

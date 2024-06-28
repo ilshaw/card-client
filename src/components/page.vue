@@ -19,9 +19,9 @@
         grid-template-columns: 1fr;
         grid-template-rows: 4rem 1fr 4rem;
         place-items: center;
+        min-height: 100%;
+        min-width: 100%;
         display: grid;
-        height: 100%;
-        width: 100%;
-        gap: 1rem;
+        gap: 2rem;
     }
 </style>

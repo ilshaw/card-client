@@ -18,9 +18,9 @@
 <template>
     <header class="header">
         <Container class="header-container" :class="props.class">
-            <Logo class="header-container-logo"/>
-            <Profile class="header-container-profile" v-if="user"/>
-            <Auth class="header-container-auth" v-else/>
+            <Logo/>
+            <Profile v-if="user"/>
+            <Auth v-else/>
         </Container>
     </header>
 </template>
@@ -30,17 +30,18 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
+        min-height: 4rem;
+        min-width: 100%;
         display: grid;
-        height: 4rem;
-        width: 100%;
     }
 
     .header-container {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 4rem;
         place-items: center;
+        min-height: 4rem;
+        min-width: 100%;
+        padding: 0 2rem 0 2rem;
         display: grid;
-        height: 4rem;
-        width: 100%;
     }
 </style>

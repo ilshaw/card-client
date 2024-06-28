@@ -20,8 +20,6 @@
         min-height: 100%;
         min-width: 100%;
         display: grid;
-        height: 100%;
-        width: 100%;
     }
 
     .body {
@@ -31,8 +29,6 @@
         min-height: 100%;
         min-width: 100%;
         display: grid;
-        height: 100%;
-        width: 100%;
     }
 
     #__nuxt {
@@ -42,7 +38,5 @@
         min-height: 100%;
         min-width: 100%;
         display: grid;
-        height: 100%;
-        width: 100%;
     }
 </style>
