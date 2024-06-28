@@ -17,7 +17,7 @@
 <style scoped lang="scss">
     .page {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 4rem 1fr 4rem;
         place-items: center;
         display: grid;
         height: 100%;

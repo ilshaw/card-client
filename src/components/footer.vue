@@ -33,7 +33,7 @@
 
     .footer-container {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 2rem 2rem;
         place-items: center;
         display: grid;
         height: 4rem;

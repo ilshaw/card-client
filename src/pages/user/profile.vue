@@ -25,8 +25,8 @@
 <template>
     <Page>
         <Header/>
-        <Main class="profile-main">
-            <Container class="profile-main-info">
+        <Main>
+            <Container>
                 <pre>
                     <span>profile</span>
                     <span>{{ user }}</span>
@@ -36,7 +36,7 @@
                     <span>{{ session }}</span>
                 </pre>
             </Container>
-            <Container class="profile-main-card">
+            <Container>
                 <pre>
                     <span>card</span>
                     <span>{{ card }}</span>
@@ -48,15 +48,5 @@
 </template>
 
 <style lang="scss">
-    .profile-main {
-        @apply flex justify-center items-center;
-    }
 
-    .profile-main-info {
-        @apply flex;
-    }
-
-    .profile-main-card {
-        @apply flex;
-    }
 </style>

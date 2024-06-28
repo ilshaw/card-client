@@ -16,7 +16,7 @@
 <template>
     <Page>
         <Header/>
-        <Main class="index-main">
+        <Main>
             
         </Main>
         <Footer/>
@@ -24,7 +24,5 @@
 </template>
 
 <style lang="scss">
-    .index-main {
-        @apply flex justify-center items-center;
-    }
+
 </style>

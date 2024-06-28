@@ -42,21 +42,21 @@
 <template>
     <Page>
         <Header/>
-        <Main class="signup-main">
-            <Form class="signup-main-form" :state="state" @submit="async (event) => await submit(event)">
-                <Text class="signup-main-form-title">
+        <Main>
+            <Form :state="state" @submit="async (event) => await submit(event)">
+                <Text>
                     Registration
                 </Text>
-                <Control class="signup-main-form-control" required name="email" label="Email">
+                <Control required name="email" label="Email">
                     <Input type="email" v-model="state.email"/>
                 </Control>
-                <Control class="signup-main-form-control" required name="password" label="Password">
+                <Control required name="password" label="Password">
                     <Input type="password" v-model="state.password"/>
                 </Control>
-                <Button class="signup-main-form-button" block type="submit">
+                <Button block type="submit">
                     Signup
                 </Button>
-                <Text class="signup-main-form-suggestion">
+                <Text>
                     Already have an account? Go <Link to="/auth/login">login</Link>.
                 </Text>
             </Form>
@@ -66,27 +66,5 @@
 </template>
 
 <style lang="scss">
-    .signup-main {
-        @apply flex justify-center items-center;
-    }
 
-    .signup-main-form {
-        @apply flex flex-col gap-4;
-    }
-
-    .signup-main-form-title {
-
-    }
-
-    .signup-main-form-control {
-
-    }
-
-    .signup-main-form-button {
-
-    }
-
-    .signup-main-form-suggestion {
-
-    }
 </style>
