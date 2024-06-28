@@ -55,22 +55,47 @@
 
 <style>
     ._profile {
-
+        grid-template-columns: 2rem;
+        grid-template-rows: 2rem;
+        place-items: center;
+        min-height: 2rem;
+        min-width: 2rem;
+        display: grid;
     }
 
     ._profile_avatar {
-
+        grid-template-columns: 2rem;
+        grid-template-rows: 2rem;
+        place-items: center;
+        min-height: 2rem;
+        min-width: 2rem;
+        display: grid;
     }
 
     ._profile_item {
-
+        grid-template-columns: 1fr 2rem;
+        grid-template-rows: 2rem;
+        place-items: center;
+        min-height: 2rem;
+        min-width: 100%;
+        display: grid;
     }
 
     ._profile_item_text {
-
+        grid-template-columns: 1fr;
+        grid-template-rows: 2rem;
+        place-items: center;
+        min-height: 2rem;
+        min-width: 100%;
+        display: grid;
     }
 
     ._profile_item_icon {
-
+        grid-template-columns: 1rem;
+        grid-template-rows: 1rem;
+        place-items: center;
+        min-height: 1rem;
+        min-width: 1rem;
+        display: grid;
     }
 </style>

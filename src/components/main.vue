@@ -30,9 +30,11 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         place-items: center;
-        min-height: 100%;
-        min-width: 100%;
-        padding: 0 2rem 0 2rem;
+        max-height: 100%;
+        max-width: 80rem;
+        padding: 0 1rem 0 1rem;
         display: grid;
+        height: 100%;
+        width: 100%;
     }
 </style>

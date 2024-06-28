@@ -12,7 +12,7 @@
 <style scoped lang="scss">
     ._logo {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 2rem;
         place-items: center;
         max-height: 2rem;
         max-width: 100%;
@@ -21,7 +21,7 @@
 
     ._logo_image {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 2rem;
         place-items: center;
         max-height: 2rem;
         max-width: 100%;

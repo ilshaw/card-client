@@ -22,6 +22,6 @@
         min-height: 100%;
         min-width: 100%;
         display: grid;
-        gap: 2rem;
+        gap: 1rem;
     }
 </style>

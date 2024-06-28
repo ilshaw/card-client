@@ -28,7 +28,7 @@
 <style scoped lang="scss">
     ._header {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: 4rem;
         place-items: center;
         min-height: 4rem;
         min-width: 100%;
@@ -39,9 +39,11 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 4rem;
         place-items: center;
-        min-height: 4rem;
-        min-width: 100%;
-        padding: 0 2rem 0 2rem;
+        max-height: 4rem;
+        max-width: 80rem;
+        padding: 0 1rem 0 1rem;
         display: grid;
+        height: 100%;
+        width: 100%;
     }
 </style>
