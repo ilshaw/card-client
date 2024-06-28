@@ -4,7 +4,7 @@ export const useSessionStore = defineStore("session", () => {
     const session = ref();
 
     async function fetchSession() {
-        const response = await internalFetch.get<{ session: unknown }>("/api/user/session", {
+        const response = await internalFetch.get<{ session: any }>("/api/user/session", {
             credentials: "include"
         });
     
@@ -17,7 +17,7 @@ export const useSessionStore = defineStore("session", () => {
             });
     
             if(response.status === 200) {
-                const response = await internalFetch.get<{ session: unknown }>("/api/user/session", {
+                const response = await internalFetch.get<{ session: any }>("/api/user/session", {
                     credentials: "include"
                 });
     
@@ -38,7 +38,7 @@ export const useSessionStore = defineStore("session", () => {
         return session;
     }
 
-    function setSession(value: unknown) {
+    function setSession(value: any) {
         return session.value = value;
     }
  

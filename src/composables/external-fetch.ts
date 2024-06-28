@@ -1,21 +1,21 @@
 type FetchMessage = string;
 type FetchStatus = number;
-type FetchCause<C = unknown> = C;
-type FetchData<D = unknown> = D;
+type FetchCause<C = any> = C;
+type FetchData<D = any> = D;
 
-interface FetchResponse<D = unknown, C = unknown> {
+interface FetchResponse<D = any, C = any> {
     status: FetchStatus
     body: FetchBody<D, C>
 }
 
-interface FetchBody<D = unknown, C = unknown> {
+interface FetchBody<D = any, C = any> {
     message: FetchMessage
     status: FetchStatus
     cause?: FetchCause<C>
     data?: FetchData<D>
 }
 
-export async function useExternalFetch<D = unknown, C = unknown>(url: string, options?: RequestInit): Promise<FetchResponse<D, C>> {
+export async function useExternalFetch<D = any, C = any>(url: string, options?: RequestInit): Promise<FetchResponse<D, C>> {
     try {
         const response = await fetch(url, options);
 

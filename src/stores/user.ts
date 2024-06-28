@@ -4,7 +4,7 @@ export const useUserStore = defineStore("user", () => {
     const user = ref();
 
     async function fetchProfile() {
-        const response = await internalFetch.get<{ user: unknown }>("/api/user/profile", {
+        const response = await internalFetch.get<{ user: any }>("/api/user/profile", {
             credentials: "include"
         });
     
@@ -17,7 +17,7 @@ export const useUserStore = defineStore("user", () => {
             });
     
             if(response.status === 200) {
-                const response = await internalFetch.get<{ user: unknown }>("/api/user/profile", {
+                const response = await internalFetch.get<{ user: any }>("/api/user/profile", {
                     credentials: "include"
                 });
     
@@ -71,7 +71,7 @@ export const useUserStore = defineStore("user", () => {
             email: email
         });
 
-        const response = await internalFetch.post<{ user: unknown }>("/api/auth/signup", {
+        const response = await internalFetch.post<{ user: any }>("/api/auth/signup", {
             headers: {
                 "Content-Type": "application/json"
             },
@@ -93,7 +93,7 @@ export const useUserStore = defineStore("user", () => {
             email: email
         });
 
-        const response = await internalFetch.post<{ user: unknown }>("/api/auth/login", {
+        const response = await internalFetch.post<{ user: any }>("/api/auth/login", {
             headers: {
                 "Content-Type": "application/json"
             },
@@ -113,7 +113,7 @@ export const useUserStore = defineStore("user", () => {
         return user;
     }
 
-    function setUser(value: unknown) {
+    function setUser(value: any) {
         return user.value = value;
     }
 

@@ -4,7 +4,7 @@ export const useCardStore = defineStore("card", () => {
     const card = ref();
 
     async function fetchCard() {
-        const response = await internalFetch.get<{ card: unknown }>("/api/user/card", {
+        const response = await internalFetch.get<{ card: any }>("/api/user/card", {
             credentials: "include"
         });
     
@@ -17,7 +17,7 @@ export const useCardStore = defineStore("card", () => {
             });
     
             if(response.status === 200) {
-                const response = await internalFetch.get<{ card: unknown }>("/api/user/card", {
+                const response = await internalFetch.get<{ card: any }>("/api/user/card", {
                     credentials: "include"
                 });
     
@@ -38,7 +38,7 @@ export const useCardStore = defineStore("card", () => {
         return card;
     }
 
-    function setCard(value: unknown) {
+    function setCard(value: any) {
         return card.value = value;
     }
  

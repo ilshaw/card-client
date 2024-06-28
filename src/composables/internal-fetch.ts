@@ -10,7 +10,7 @@ interface FetchOptions {
 }
 
 export function useInternalFetch() {
-    async function post<D = unknown, C = unknown>(url: FetchUrl, options?: FetchOptions) {
+    async function post<D = any, C = any>(url: FetchUrl, options?: FetchOptions) {
         try {
             return await useExternalFetch<D, C>(url, { ...options, method: "POST" });
         }
@@ -25,7 +25,7 @@ export function useInternalFetch() {
         }
     }
 
-    async function get<D = unknown, C = unknown>(url: FetchUrl, options?: FetchOptions) {
+    async function get<D = any, C = any>(url: FetchUrl, options?: FetchOptions) {
         try {
             return await useExternalFetch<D, C>(url, { ...options, method: "GET" });
         }
