@@ -5,10 +5,10 @@
 
 <template>
     <Container class="_auth">
-        <Button class="_auth_button" block to="/auth/signup">
+        <Button class="_auth_button" to="/auth/signup">
             Signup
         </Button>
-        <Button class="_auth_button" block to="/auth/login">
+        <Button class="_auth_button" to="/auth/login">
             Login
         </Button>
     </Container>
@@ -16,21 +16,10 @@
 
 <style scoped lang="scss">
     ._auth {
-        grid-template-columns: 4rem 4rem;
-        grid-template-rows: 2rem;
-        place-items: center;
-        min-height: 2rem;
-        min-width: 9rem;
-        display: grid;
-        gap: 1rem;
+        @apply flex flex-row justify-center items-center w-min h-8 gap-2;
     }
 
     ._auth_button {
-        grid-template-columns: 4rem;
-        grid-template-rows: 2rem;
-        place-items: center;
-        min-height: 2rem;
-        min-width: 4rem;
-        display: grid;
+        @apply flex flex-row justify-center items-center w-min h-8;
     }
 </style>

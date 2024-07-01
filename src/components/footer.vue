@@ -23,32 +23,14 @@
 
 <style scoped lang="scss">
     ._footer {
-        grid-template-columns: 1fr;
-        grid-template-rows: 4rem;
-        place-items: center;
-        min-height: 4rem;
-        min-width: 100%;
-        display: grid;
+        @apply flex flex-row justify-center items-center w-full h-16 px-2;
     }
 
     ._footer_container {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2rem 2rem;
-        place-items: center;
-        max-height: 4rem;
-        max-width: 80rem;
-        padding: 0 1rem 0 1rem;
-        display: grid;
-        height: 100%;
-        width: 100%;
+        @apply container flex flex-col justify-between items-center w-full h-16 px-2;
     }
 
     ._footer_copyright {
-        grid-template-columns: 1fr;
-        grid-template-rows: 2rem;
-        place-items: center;
-        min-height: 2rem;
-        min-width: 10rem;
-        display: grid;
+        @apply flex flex-row justify-center items-center w-full h-8 px-2;
     }
 </style>

@@ -27,23 +27,10 @@
 
 <style scoped lang="scss">
     ._header {
-        grid-template-columns: 1fr;
-        grid-template-rows: 4rem;
-        place-items: center;
-        min-height: 4rem;
-        min-width: 100%;
-        display: grid;
+        @apply flex flex-row justify-center items-center w-full h-16 px-2;
     }
 
     ._header_container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 4rem;
-        place-items: center;
-        max-height: 4rem;
-        max-width: 80rem;
-        padding: 0 1rem 0 1rem;
-        display: grid;
-        height: 100%;
-        width: 100%;
+        @apply container flex flex-row justify-between items-center w-full h-16 px-2;
     }
 </style>
