@@ -1,9 +1,9 @@
 const internalFetch = useInternalFetch();
 
 export const useUserStore = defineStore("user", () => {
-    const user = ref();
+    const user = ref(null);
 
-    async function fetchProfile() {
+    async function fetchUserProfile() {
         const response = await internalFetch.get<{ user: any }>("/api/user/profile", {
             credentials: "include"
         });
@@ -34,7 +34,7 @@ export const useUserStore = defineStore("user", () => {
         }
     }
 
-    async function fetchLogout() {
+    async function fetchAuthLogout() {
         const response = await internalFetch.get("/api/auth/logout", {
             credentials: "include"
         });
@@ -65,7 +65,7 @@ export const useUserStore = defineStore("user", () => {
         }
     }
 
-    async function fetchSignup(password: string, email: string) {
+    async function fetchAuthSignup(password: string, email: string) {
         const body = JSON.stringify({
             password: password,
             email: email
@@ -87,7 +87,7 @@ export const useUserStore = defineStore("user", () => {
         }
     }
 
-    async function fetchLogin(password: string, email: string) {
+    async function fetchAuthLogin(password: string, email: string) {
         const body = JSON.stringify({
             password: password,
             email: email
@@ -118,10 +118,10 @@ export const useUserStore = defineStore("user", () => {
     }
 
     return { 
-        fetchProfile,
-        fetchLogout,
-        fetchSignup,
-        fetchLogin,
+        fetchUserProfile,
+        fetchAuthLogout,
+        fetchAuthSignup,
+        fetchAuthLogin,
         getUser, 
         setUser 
     };

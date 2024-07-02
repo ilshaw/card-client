@@ -1,9 +1,9 @@
 const internalFetch = useInternalFetch();
 
 export const useSessionStore = defineStore("session", () => {
-    const session = ref();
+    const session = ref(null);
 
-    async function fetchSession() {
+    async function fetchUserSession() {
         const response = await internalFetch.get<{ session: any }>("/api/user/session", {
             credentials: "include"
         });
@@ -43,7 +43,7 @@ export const useSessionStore = defineStore("session", () => {
     }
  
     return { 
-        fetchSession,
+        fetchUserSession,
         getSession, 
         setSession 
     };
