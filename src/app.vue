@@ -14,14 +14,14 @@
 
 <style lang="scss">
     ._html {
-        @apply flex flex-col justify-center items-center min-w-full min-h-screen;
+        @apply flex flex-row justify-center items-center min-w-full min-h-screen;
     }
 
     ._body {
-        @apply flex flex-col justify-center items-center min-w-full min-h-screen;
+        @apply flex flex-row justify-center items-center min-w-full min-h-screen;
     }
 
     #__nuxt {
-        @apply flex flex-col justify-center items-center min-w-full min-h-screen;
+        @apply flex flex-row justify-center items-center min-w-full min-h-screen;
     }
 </style>

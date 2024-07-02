@@ -9,13 +9,13 @@
 </script>
 
 <template>
-    <NuxtLink class="_link" :to="props.to" :class="props.class" :external="props.external">
+    <NuxtLink class="__link" :to="props.to" :class="props.class" :external="props.external">
         <slot/>
     </NuxtLink>
 </template>
 
-<style scoped lang="scss">
-    ._link {
-
+<style lang="scss">
+    .__link {
+        @apply w-fit h-fit text-base text-left underline text-primary-400;
     }
 </style>

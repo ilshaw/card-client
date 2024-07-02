@@ -8,11 +8,11 @@
 </script>
 
 <template>
-    <UInput class="_input" :type="props.type" :class="props.class"/>
+    <UInput class="__input" :type="props.type" :class="props.class"/>
 </template>
 
-<style scoped lang="scss">
-    ._input {
-
+<style lang="scss">
+    .__input {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

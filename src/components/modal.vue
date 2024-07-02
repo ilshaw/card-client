@@ -7,13 +7,13 @@
 </script>
 
 <template>
-    <UModal class="_modal" :class="props.class">
+    <UModal class="__modal" :class="props.class">
         <slot/>
     </UModal>
 </template>
 
-<style scoped lang="scss">
-    ._modal {
-
+<style lang="scss">
+    .__modal {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

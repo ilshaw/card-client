@@ -20,7 +20,7 @@
     });
 
     async function submit(event: any) {
-        const response = await userStore.fetchLogin(event.data.password, event.data.email);
+        const response = await userStore.fetchAuthLogin(event.data.password, event.data.email);
 
         if(response.status === 200) {
             return await router.push("/");
@@ -42,21 +42,21 @@
 <template>
     <Page>
         <Header/>
-        <Main>
-            <Form :state="state" @submit="async (event) => await submit(event)">
-                <Text>
+        <Main class="_login_main_container">
+            <Form class="_login_main_container_form" :state="state" @submit="async (event) => await submit(event)">
+                <Text class="_login_main_container_form_title">
                     Authentication
                 </Text>
-                <Control required name="email" label="Email">
-                    <Input type="email" v-model="state.email"/>
+                <Control class="_login_main_container_form_control" required name="email" label="Email">
+                    <Input class="_login_main_container_form_control_input" type="email" v-model="state.email"/>
                 </Control>
-                <Control required name="password" label="Password">
-                    <Input type="password" v-model="state.password"/>
+                <Control class="_login_main_container_form_control" required name="password" label="Password">
+                    <Input class="_login_main_container_form_control_input" type="password" v-model="state.password"/>
                 </Control>
-                <Button block type="submit">
+                <Button class="_login_main_container_form_button" block type="submit">
                     Login
                 </Button>
-                <Text>
+                <Text class="_login_main_container_form_suggestion">
                     Dont have an account? Go <Link to="/auth/signup">signup</Link>.
                 </Text>
             </Form>
@@ -66,5 +66,31 @@
 </template>
 
 <style lang="scss">
+    ._login_main_container {
+        @apply flex flex-col justify-center items-center w-full h-full;
+    }
 
+    ._login_main_container_form {
+        @apply flex flex-col justify-start items-start w-80 h-fit gap-2;
+    }
+
+    ._login_main_container_form_title {
+        @apply w-full h-fit text-xl text-left;
+    }
+
+    ._login_main_container_form_control {
+        @apply flex flex-col justify-start items-start w-full h-fit;
+    }
+
+    ._login_main_container_form_control_input {
+        @apply flex flex-row justify-start items-start w-full h-fit;
+    }
+
+    ._login_main_container_form_button {
+        @apply flex flex-row justify-center items-center w-full h-fit;
+    }
+
+    ._login_main_container_form_suggestion {
+        @apply w-full h-fit text-base text-center;
+    }
 </style>

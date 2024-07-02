@@ -1,18 +1,19 @@
 <script setup lang="ts">
-    interface ImageProps {
+    interface ItemProps {
         class?: string
-        src?: string
     }
 
-    const props = defineProps<ImageProps>();
+    const props = defineProps<ItemProps>();
 </script>
 
 <template>
-        <NuxtImg class="__image" :src="props.src" :class="props.class"/>
+    <li class="__item" :class="props.class">
+        <slot/>
+    </li>
 </template>
 
 <style lang="scss">
-    .__image {
+    .__item {
         @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

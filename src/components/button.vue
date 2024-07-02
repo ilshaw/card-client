@@ -10,13 +10,13 @@
 </script>
 
 <template>
-    <UButton class="_button" :to="props.to" :type="props.type" :class="props.class" :block="props.block">
+    <UButton class="__button" :to="props.to" :type="props.type" :class="props.class" :block="props.block">
         <slot/>
     </UButton>
 </template>
 
-<style scoped lang="scss">
-    ._button {
-
+<style lang="scss">
+    .__button {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

@@ -29,8 +29,8 @@
 
     const open = ref(false);
 
-    async function logout() {
-        const response = await userStore.fetchLogout();
+    async function submit() {
+        const response = await userStore.fetchAuthLogout();
 
         if(response.status === 200) {
             return await router.push("/");
@@ -50,16 +50,16 @@
 </script>
 
 <template>
-    <Dropdown class="_profile" :items="items">
+    <Dropdown class="__profile" :items="items">
         <template #default>
-            <Avatar class="_profile_avatar" src="https://avatars.githubusercontent.com/u/73400369?v=4"/>
+            <Avatar class="__profile_avatar" src="https://avatars.githubusercontent.com/u/73400369?v=4"/>
             <Modal v-model="open">
-                <Container class="_profile_modal">
-                    <Text class="_profile_modal_text">
+                <Container class="__profile_modal">
+                    <Text class="__profile_modal_text">
                         Are you sure?
                     </Text>
-                    <Container class="_profile_modal_button">
-                        <Button @click="() => logout()">
+                    <Container class="__profile_modal_buttons">
+                        <Button @click="() => submit()">
                             Yes
                         </Button>
                         <Button @click="() => hide()">
@@ -70,46 +70,46 @@
             </Modal>
         </template>
         <template #item="props">
-            <Container class="_profile_item">
-                <Text class="_profile_item_text">
+            <Container class="__profile_item">
+                <Text class="__profile_item_text">
                     {{ props.item.label }}
                 </Text>
-                <Icon class="_profile_item_icon" :name="props.item.icon"/>
+                <Icon class="__profile_item_icon" :name="props.item.icon"/>
             </Container>
         </template>
     </Dropdown>
 </template>
 
-<style>
-    ._profile {
-        @apply flex flex-row justify-center items-center w-8 h-8;
+<style lang="scss">
+    .__profile {
+        @apply flex flex-row justify-start items-start w-8 h-8;
     }
 
-    ._profile_avatar {
-        @apply flex flex-row justify-center items-center w-8 h-8;
+    .__profile_avatar {
+        @apply flex flex-row justify-start items-start w-8 h-8;
     }
 
-    ._profile_modal {
-        @apply flex flex-col justify-center items-center w-full h-32 p-2;
+    .__profile_modal {
+        @apply flex flex-col justify-start items-start w-full h-32 p-2;
     }
 
-    ._profile_modal_text {
-        @apply flex flex-col justify-center items-center w-full h-16;
+    .__profile_modal_text {
+        @apply flex flex-row justify-center items-center w-full h-16;
     }
 
-    ._profile_modal_button {
+    .__profile_modal_buttons {
         @apply flex flex-row justify-center items-center w-full h-16 gap-2;
     }
 
-    ._profile_item {
+    .__profile_item {
         @apply flex flex-row justify-between items-center w-full h-8;
     }
 
-    ._profile_item_text {
-        @apply flex flex-row justify-center items-center w-min h-8;
+    .__profile_item_text {
+        @apply flex flex-row justify-start items-center w-fit h-8;
     }
 
-    ._profile_item_icon {
-        @apply flex flex-row justify-center items-center w-4 h-4;
+    .__profile_item_icon {
+        @apply flex flex-row justify-start items-start w-4 h-4;
     }
 </style>

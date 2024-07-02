@@ -11,9 +11,9 @@
 </script>
 
 <template>
-    <footer class="_footer">
-        <Container class="_footer_container" :class="props.class">
-            <Text class="_footer_copyright">
+    <footer class="__footer">
+        <Container class="__footer_container" :class="props.class">
+            <Text class="__footer_copyright">
                 Copyright © 2024
             </Text>
             <Social/>
@@ -21,16 +21,16 @@
     </footer>
 </template>
 
-<style scoped lang="scss">
-    ._footer {
+<style lang="scss">
+    .__footer {
         @apply flex flex-row justify-center items-center w-full h-16 px-2;
     }
 
-    ._footer_container {
-        @apply container flex flex-col justify-between items-center w-full h-16 px-2;
+    .__footer_container {
+        @apply flex flex-col justify-between items-center w-full h-16 px-2 container;
     }
 
-    ._footer_copyright {
+    .__footer_copyright {
         @apply flex flex-row justify-center items-center w-full h-8 px-2;
     }
 </style>

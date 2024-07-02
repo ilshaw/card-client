@@ -8,11 +8,11 @@
 </script>
 
 <template>
-    <UAvatar class="_avatar" :src="props.src" :class="props.class"/>
+    <UAvatar class="__avatar" :src="props.src" :class="props.class"/>
 </template>
 
-<style scoped lang="scss">
-    ._avatar {
-
+<style lang="scss">
+    .__avatar {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

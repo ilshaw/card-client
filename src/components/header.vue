@@ -16,8 +16,8 @@
 </script>
 
 <template>
-    <header class="_header">
-        <Container class="_header_container" :class="props.class">
+    <header class="__header">
+        <Container class="__header_container" :class="props.class">
             <Logo/>
             <Profile v-if="user"/>
             <Auth v-else/>
@@ -25,12 +25,12 @@
     </header>
 </template>
 
-<style scoped lang="scss">
-    ._header {
+<style lang="scss">
+    .__header {
         @apply flex flex-row justify-center items-center w-full h-16 px-2;
     }
 
-    ._header_container {
-        @apply container flex flex-row justify-between items-center w-full h-16 px-2;
+    .__header_container {
+        @apply flex flex-row justify-between items-center w-full h-16 px-2 container;
     }
 </style>

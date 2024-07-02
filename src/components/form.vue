@@ -14,13 +14,13 @@
 </script>
 
 <template>
-    <UForm class="_form" :state="props.state" :class="props.class" @submit="(event) => emits('submit', event)">
+    <UForm class="__form" :state="props.state" :class="props.class" @submit="(event) => emits('submit', event)">
         <slot/>
     </UForm>
 </template>
 
-<style scoped lang="scss">
-    ._form {
-
+<style lang="scss">
+    .__form {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

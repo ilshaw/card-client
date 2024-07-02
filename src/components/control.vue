@@ -10,13 +10,13 @@
 </script>
 
 <template>
-    <UFormGroup class="_control" :name="props.name" :label="props.label" :class="props.class" :required="props.required">
+    <UFormGroup class="__control" :ui="{ container: 'flex flex-col w-full gap-2' }" :name="props.name" :label="props.label" :class="props.class" :required="props.required">
         <slot/>
     </UFormGroup>
 </template>
 
-<style scoped lang="scss">
-    ._control {
-
+<style lang="scss">
+    .__control {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

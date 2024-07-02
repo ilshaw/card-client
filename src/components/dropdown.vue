@@ -8,7 +8,7 @@
 </script>
 
 <template>
-    <UDropdown class="_dropdown" :class="props.class" :items="props.items">
+    <UDropdown class="__dropdown" :class="props.class" :items="props.items">
         <template #default>
             <slot name="default"/>
         </template>
@@ -18,8 +18,8 @@
     </UDropdown>
 </template>
 
-<style scoped lang="scss">
-    ._dropdown {
-
+<style lang="scss">
+    .__dropdown {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

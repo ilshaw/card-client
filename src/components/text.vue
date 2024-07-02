@@ -7,13 +7,13 @@
 </script>
 
 <template>
-    <span class="_text" :class="props.class">
+    <span class="__text" :class="props.class">
         <slot/>
     </span>
 </template>
 
-<style scoped lang="scss">
-    ._text {
-
+<style lang="scss">
+    .__text {
+        @apply w-fit h-fit text-base text-left;
     }
 </style>

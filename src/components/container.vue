@@ -7,13 +7,13 @@
 </script>
 
 <template>
-    <div class="_container" :class="props.class">
+    <div class="__container" :class="props.class">
         <slot/>
     </div>
 </template>
 
-<style scoped lang="scss">
-    ._container {
-
+<style lang="scss">
+    .__container {
+        @apply flex flex-row justify-start items-start w-fit h-fit;
     }
 </style>

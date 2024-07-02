@@ -16,7 +16,7 @@
 <template>
     <Page>
         <Header/>
-        <Main>
+        <Main class="_index_main_container">
             
         </Main>
         <Footer/>
@@ -24,5 +24,7 @@
 </template>
 
 <style lang="scss">
-
+    ._index_main_container {
+        @apply flex flex-col justify-start items-start w-full h-full;
+    }
 </style>
