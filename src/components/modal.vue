@@ -7,7 +7,7 @@
 </script>
 
 <template>
-    <UModal class="__modal" :class="props.class">
+    <UModal class="__modal" :ui="{ container: 'items-center' }" :class="props.class">
         <slot/>
     </UModal>
 </template>

@@ -67,83 +67,78 @@
     <Page>
         <Header/>
         <Main class="_profile_main_container">
-            <Container class="_profile_main_container_info">
-                <Image class="_profile_main_container_info_avatar" src="https://avatars.githubusercontent.com/u/73400369?v=4"/>
-                <Container class="_profile_main_container_info_container">
-                    <Container class="_profile_main_container_info_container_profile">
-                        <Text class="_profile_main_container_info_container_profile_title">
-                            Profile
-                        </Text>
-                        <Container class="_profile_main_container_info_container_profile_container">
-                            <List class="_profile_main_container_info_container_profile_container_list">
-                                <Item class="_profile_main_container_info_container_profile_container_list_item">
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_title">
-                                        Id
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_text">
-                                        {{ user.id }}
-                                    </Text>
-                                </Item>
-                                <Item class="_profile_main_container_info_container_profile_container_list_item">
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_title">
-                                        Email
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_text">
-                                        {{ user.email }}
-                                    </Text>
-                                </Item>
-                                <Item class="_profile_main_container_info_container_profile_container_list_item">
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_title">
-                                        Created
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_text">
-                                        {{ user.created }}
-                                    </Text>
-                                </Item>
-                                <Item class="_profile_main_container_info_container_profile_container_list_item">
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_title">
-                                        Updated
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_profile_container_list_item_text">
-                                        {{ user.updated }}
-                                    </Text>
-                                </Item>
-                            </List>
-                        </Container>
-                    </Container>
-                    <Container class="_profile_main_container_info_container_session">
-                        <Text class="_profile_main_container_info_container_session_title">
-                            Session
-                        </Text>
-                        <Container class="_profile_main_container_info_container_session_container">
-                            <List class="_profile_main_container_info_container_session_container_list">
-                                <Item class="_profile_main_container_info_container_session_container_list_item">
-                                    <Text class="_profile_main_container_info_container_session_container_list_item_title">
-                                        Id
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_session_container_list_item_text">
-                                        {{ session.id }}
-                                    </Text>
-                                </Item>
-                                <Item class="_profile_main_container_info_container_session_container_list_item">
-                                    <Text class="_profile_main_container_info_container_session_container_list_item_title">
-                                        Created
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_session_container_list_item_text">
-                                        {{ session.created }}
-                                    </Text>
-                                </Item>
-                                <Item class="_profile_main_container_info_container_session_container_list_item">
-                                    <Text class="_profile_main_container_info_container_session_container_list_item_title">
-                                        Updated
-                                    </Text>
-                                    <Text class="_profile_main_container_info_container_session_container_list_item_text">
-                                        {{ session.updated }}
-                                    </Text>
-                                </Item>
-                            </List>
-                        </Container>
-                    </Container>
+            <Container class="_profile_main_container_profile" v-if="user">
+                <Text class="_profile_main_container_profile_title">
+                    Profile
+                </Text>
+                <Container class="_profile_main_container_profile_container">
+                    <List class="_profile_main_container_profile_container_list">
+                        <Item class="_profile_main_container_profile_container_list_item">
+                            <Text class="_profile_main_container_profile_container_list_item_title">
+                                Id
+                            </Text>
+                            <Text class="_profile_main_container_profile_container_list_item_text">
+                                {{ user.id }}
+                            </Text>
+                        </Item>
+                        <Item class="_profile_main_container_profile_container_list_item">
+                            <Text class="_profile_main_container_profile_container_list_item_title">
+                                Email
+                            </Text>
+                            <Text class="_profile_main_container_profile_container_list_item_text">
+                                {{ user.email }}
+                            </Text>
+                        </Item>
+                        <Item class="_profile_main_container_profile_container_list_item">
+                            <Text class="_profile_main_container_profile_container_list_item_title">
+                                Created
+                            </Text>
+                            <Text class="_profile_main_container_profile_container_list_item_text">
+                                {{ user.created }}
+                            </Text>
+                        </Item>
+                        <Item class="_profile_main_container_profile_container_list_item">
+                            <Text class="_profile_main_container_profile_container_list_item_title">
+                                Updated
+                            </Text>
+                            <Text class="_profile_main_container_profile_container_list_item_text">
+                                {{ user.updated }}
+                            </Text>
+                        </Item>
+                    </List>
+                </Container>
+            </Container>
+            <Container class="_profile_main_container_session" v-if="session">
+                <Text class="_profile_main_container_session_title">
+                    Session
+                </Text>
+                <Container class="_profile_main_container_session_container">
+                    <List class="_profile_main_container_session_container_list">
+                        <Item class="_profile_main_container_session_container_list_item">
+                            <Text class="_profile_main_container_session_container_list_item_title">
+                                Id
+                            </Text>
+                            <Text class="_profile_main_container_session_container_list_item_text">
+                                {{ session.id }}
+                            </Text>
+                        </Item>
+                        <Item class="_profile_main_container_session_container_list_item">
+                            <Text class="_profile_main_container_session_container_list_item_title">
+                                Created
+                            </Text>
+                            <Text class="_profile_main_container_session_container_list_item_text">
+                                {{ session.created }}
+                            </Text>
+                        </Item>
+                        <Item class="_profile_main_container_session_container_list_item">
+                            <Text class="_profile_main_container_session_container_list_item_title">
+                                Updated
+                            </Text>
+                            <Text class="_profile_main_container_session_container_list_item_text">
+                                {{ session.updated }}
+                            </Text>
+                        </Item>
+                    </List>
                 </Container>
             </Container>
             <Container class="_profile_main_container_card" v-if="card">
@@ -250,71 +245,59 @@
         @apply flex flex-col justify-start items-start w-full h-full gap-2;
     }
 
-    ._profile_main_container_info {
-        @apply flex flex-row justify-start items-start w-full h-fit gap-2;
-    }
-
-    ._profile_main_container_info_avatar {
-        @apply flex flex-row justify-start items-start w-80 h-80 rounded border border-gray-700;
-    }
-
-    ._profile_main_container_info_container {
+    ._profile_main_container_profile {
         @apply flex flex-col justify-start items-start w-full h-fit gap-2;
     }
 
-    ._profile_main_container_info_container_profile {
-        @apply flex flex-col justify-start items-start w-full h-fit gap-2;
-    }
-
-    ._profile_main_container_info_container_profile_title {
+    ._profile_main_container_profile_title {
         @apply w-fit h-fit text-xl text-left;
     }
 
-    ._profile_main_container_info_container_profile_container {
+    ._profile_main_container_profile_container {
         @apply flex flex-row justify-start items-start w-full h-fit;
     }
 
-    ._profile_main_container_info_container_profile_container_list {
+    ._profile_main_container_profile_container_list {
         @apply flex flex-col justify-start items-start w-full h-fit;
     }
 
-    ._profile_main_container_info_container_profile_container_list_item {
+    ._profile_main_container_profile_container_list_item {
         @apply flex flex-row justify-start items-center w-full h-fit gap-2;
     }
 
-    ._profile_main_container_info_container_profile_container_list_item_title {
-        @apply w-40 h-fit text-lg text-left;
+    ._profile_main_container_profile_container_list_item_title {
+        @apply w-32 h-fit text-lg text-left;
     }
 
-    ._profile_main_container_info_container_profile_container_list_item_text {
+    ._profile_main_container_profile_container_list_item_text {
         @apply w-fit h-fit text-base text-left;
     }
 
-    ._profile_main_container_info_container_session {
+    ._profile_main_container_session {
         @apply flex flex-col justify-start items-start w-full h-fit gap-2;
     }
 
-    ._profile_main_container_info_container_session_title {
+    ._profile_main_container_session_title {
         @apply w-fit h-fit text-xl text-left;
     }
 
-    ._profile_main_container_info_container_session_container {
+    ._profile_main_container_session_container {
         @apply flex flex-row justify-start items-start w-full h-fit;
     }
 
-    ._profile_main_container_info_container_session_container_list {
+    ._profile_main_container_session_container_list {
         @apply flex flex-col justify-start items-start w-full h-fit;
     }
 
-    ._profile_main_container_info_container_session_container_list_item {
+    ._profile_main_container_session_container_list_item {
         @apply flex flex-row justify-start items-center w-full h-fit gap-2;
     }
 
-    ._profile_main_container_info_container_session_container_list_item_title {
-        @apply w-40 h-fit text-lg text-left;
+    ._profile_main_container_session_container_list_item_title {
+        @apply w-32 h-fit text-lg text-left;
     }
 
-    ._profile_main_container_info_container_session_container_list_item_text {
+    ._profile_main_container_session_container_list_item_text {
         @apply w-fit h-fit text-base text-left;
     }
 
@@ -339,7 +322,7 @@
     }
 
     ._profile_main_container_card_container_list_item_title {
-        @apply w-40 h-fit text-lg text-left;
+        @apply w-32 h-fit text-lg text-left;
     }
 
     ._profile_main_container_card_container_list_item_text {
@@ -367,7 +350,7 @@
     }
 
     ._profile_main_container_links_container_list_item_title {
-        @apply w-40 h-fit text-lg text-left;
+        @apply w-32 h-fit text-lg text-left;
     }
 
     ._profile_main_container_links_container_list_item_text {
