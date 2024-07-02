@@ -1,7 +1,7 @@
 const internalFetch = useInternalFetch();
 
 export const useUserStore = defineStore("user", () => {
-    const user = ref(null);
+    const user = ref<any>(null);
 
     async function fetchUserProfile() {
         const response = await internalFetch.get<{ user: any }>("/api/user/profile", {

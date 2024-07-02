@@ -1,7 +1,7 @@
 const internalFetch = useInternalFetch();
 
 export const useCardStore = defineStore("card", () => {
-    const card = ref(null);
+    const card = ref<any>(null);
 
     async function fetchCardCreate(description: string, links: [{ type: string, url: string }]) {
         const body = JSON.stringify({
