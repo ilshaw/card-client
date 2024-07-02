@@ -2,7 +2,6 @@
     import Container from "../../components/container.vue";
     import Footer from "../../components/footer.vue";
     import Header from "../../components/header.vue";
-    import Image from "../../components/image.vue";
     import Modal from "../../components/modal.vue";
     import Page from "../../components/page.vue";
     import Main from "../../components/main.vue";
